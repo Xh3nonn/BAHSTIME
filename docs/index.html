@@ -6,16 +6,14 @@
 <script>
 function init(){
   bellSchedule();
-
+  
 }
-
 function bellSchedule() {
   let d = new Date();
   let currentDayOfWeek = d.getDay();
   let currentYear = d.getYear() - 100;
   let currentMonth = d.getMonth() + 1;
   let todaysDate = currentMonth.toString() + d.getDate().toString() + currentYear.toString();
-
   let currentTimeIndex = d.getHours() + "" + (d.getMinutes()<10?'0':'') + d.getMinutes();
   let currentMessage = "";
   let nextMessage = "";
