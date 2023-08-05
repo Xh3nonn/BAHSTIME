@@ -84,7 +84,7 @@ p.center{
 }
 
 #message {
-  background-color: red;
+  background-color: black;
   margin: 0;
   padding: 0;
   color: #d41702;
@@ -94,7 +94,7 @@ p.center{
 }
 
 #next-message, #plus-next-message {
-  background-color: red;
+  background-color: black;
   margin: 0;
   padding: 0;
   color: #d41702;
