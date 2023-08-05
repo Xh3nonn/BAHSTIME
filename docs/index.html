@@ -22,11 +22,11 @@ function bellSchedule() {
   let schedTitle = "";
 
 if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
-    schedTitle = "It's the WEEKEND! Enjoy!";
+    schedTitle = "Have a good weekend !";
     sched = [
-      { t: 0, msg: "School is out!" },
-      { t: 1, msg: "School is out!" },
-      { t: 2359, msg: "School is out!"},
+      { t: 0, msg: "No school" },
+      { t: 1, msg: "No School" },
+      { t: 2359, msg: "No School"},
     ];
     let sl = sched.length;
   }
@@ -34,7 +34,7 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
     schedTitle = "Freshman & Sophmore Schedule";
     sched = [
             { t: 0, msg: "8:15<br />	First Bell" },
-      { t: 815, msg: "First Bell <br />	 8:15 -  8:30" },
+      { t: 815, msg: "Warning Bell <br />	 8:15 -  8:30" },
      { t: 830, msg: "1st Period <br />	 8:30 -  9:15 " },
      { t: 915, msg: "Transition    <br />	 9:15 -  9:20" },
      { t: 920, msg: "2nd Period <br />	 9:20 -  10:05 " },
@@ -54,8 +54,8 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
      { t: 1435, msg: "9th Period <br />	 2:35 -  3:20 " },
      { t: 1520, msg: "Transition    <br />	 3:20 -  3:25" },
      { t: 1525, msg: "9th Period <br />	 3:25 -  4:10 " },
-     { t: 1610, msg: "School's Out!" },
-     { t: 2400, msg: "clock will reset"},
+     { t: 1610, msg: "Dismissed, have a good day!" },
+     { t: 2400, msg: "No School"},
 
     ];
     let sl = sched.length;
@@ -74,9 +74,9 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
       let ni = i+1; let nii = i+2;
       if (ni < sl && nii < sl) {
           nextMessage = sched[ni].msg;
-          document.getElementById("next-message").innerHTML = "Next Up...<br />" + nextMessage;
+          document.getElementById("next-message").innerHTML = "Next <br />" + nextMessage;
           plusNextMessage = sched[nii].msg;
-          document.getElementById("plus-next-message").innerHTML = "Then...<br />" + plusNextMessage;
+          document.getElementById("plus-next-message").innerHTML = "Then <br />" + plusNextMessage;
       }
     var countDown = (Math.trunc(sched[ni].t/100) * 60 + sched[ni].t % 100) - (Math.trunc(currentTimeIndex/100) * 60 + currentTimeIndex % 100);
     var countDownSeconds = 59 - d.getSeconds();
@@ -91,7 +91,7 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
     document.getElementById("countdown").innerHTML =  "<span style='color:#FF000D'>" + Math.floor(countDown/60) + " hours " +  countDown%60 + " minutes </style>";
   }
   else {
-    document.getElementById("countdown").innerHTML =  "<span style='color:#FF000D'>Minutes Remaining: </style>" + countDown;
+    document.getElementById("countdown").innerHTML =  "<span style='color:#FF000D'>Minutes Left: </style>" + countDown;
   }
 
   document.getElementById("clock").innerHTML = d;
@@ -130,8 +130,8 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
       <br />
       <p id="plus-next-message"></p>
       <p><br /></p>
-      <p id="studentMessage"><br />LINKS:<br /><br /></p>
-      <p id="studentMessage"><a href="https://hac.yisd.net/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess" target="_blank">HAC Login</a><br /><br /><p>
+      <p id="studentMessage"><br />Important Links:<br /><br /></p>
+      <p id="studentMessage"><a href="https://hac.yisd.net/HomeAccess/Account/LogOn?ReturnUrl=%2fHomeAccess" target="_blank">HAC (Grades and Schedule) </a><br /><br /><p>
    </div>
     </div>
 
