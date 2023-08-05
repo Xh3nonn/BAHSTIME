@@ -84,10 +84,10 @@ p.center{
 }
 
 #message {
-  background-color: black;
+  background-color: #000080;
   margin: 0;
   padding: 0;
-  color: #d41702;
+  color: #FFFFFF;
   text-align: center;
   font-size: 55px;
   border: solid;
