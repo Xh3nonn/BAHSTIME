@@ -77,8 +77,8 @@ p.center{
   background-color: #000;
   color: red;
   text-align: center;
-  font-variant: normal;
-  font-size: 20px;
+  font-variant: small-caps;
+  font-size: 30px;
   margin: 0;
   padding: 0;
 }
