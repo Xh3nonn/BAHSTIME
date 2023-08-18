@@ -85,7 +85,7 @@ if (currentDayOfWeek == 0 || currentDayOfWeek == 6){
 
   if(countDown < 5){
     countDown = countDown - 1;
-    document.getElementById("countdown").innerHTML = "<span style='color:red'>" + countDown + ":" + (countDownSeconds<10?'0':'') + countDownSeconds;
+    document.getElementById("countdown").innerHTML = "<span style='color:blue'>" + countDown + ":" + (countDownSeconds<10?'0':'') + countDownSeconds;
   }
   else if(countDown > 60) {
     document.getElementById("countdown").innerHTML =  "<span style='color:#000000'>" + Math.floor(countDown/60) + " hours " +  countDown%60 + " minutes </style>";
